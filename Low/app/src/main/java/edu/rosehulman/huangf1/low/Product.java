@@ -4,10 +4,15 @@ import android.icu.text.IDNA;
 import android.media.Image;
 import android.media.RemoteController;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 /**
  * Created by huangf1 on 1/15/2017.
  */
-
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Product {
 
 
@@ -18,18 +23,27 @@ public class Product {
     private Double price;
     private String priceLabel;
     private Image image;
-    private IDNA.Info metadata;
+//    private JSONObject metadata;
+    private JSONObject products;
 
     public Product() {
     }
 
-    public IDNA.Info getMetadata() {
-        return metadata;
+    public JSONObject getProducts() {
+        return products;
     }
 
-    public void setMetadata(IDNA.Info metadata) {
-        this.metadata = metadata;
+    public void setProducts(JSONObject products) {
+        this.products = products;
     }
+    //
+//    public IDNA.Info getMetadata() {
+//        return metadata;
+//    }
+//
+//    public void setMetadata(IDNA.Info metadata) {
+//        this.metadata = metadata;
+//    }
 
     public String getClickUrl() {
         return clickUrl;
@@ -83,7 +97,7 @@ public class Product {
         this.price = price;
     }
 
-    public int getID() {
+    public int getId() {
         return id;
     }
 }

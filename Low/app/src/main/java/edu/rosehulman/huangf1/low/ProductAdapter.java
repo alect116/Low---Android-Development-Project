@@ -12,6 +12,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -22,7 +24,7 @@ import java.util.Locale;
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
     private Context mContext;
-    private List<Product> mProducts;
+    private ArrayList<Product> mProducts;
     private RecyclerView mRecyclerView;
     private String[] mSearchQuery;
     private String mUrl;
