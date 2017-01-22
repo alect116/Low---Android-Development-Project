@@ -5,6 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
     <string name="price">Price</string>
     <string name="product_name">Product Name</string>
     <string name="main_sreen_text">What are you looking for?</string>
@@ -16,4 +17,11 @@
     <string name="popularProducts">Popular Products</string>
     <string name="capture_button">Capture</string>
     <string name="buy">Buy</string>
+=======
+    <string name="product_name">Product Name</string>
+    <string name="buy_button">Buy</string>
+    <string name="sample_retailer_name">Amazon.com</string>
+    <string name="sample_price">$99.99</string>
+    <string name="capture_button">Capture</string>
+>>>>>>> refs/remotes/huangf1/master
 </resources>
