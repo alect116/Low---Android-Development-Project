@@ -9,4 +9,10 @@
     <string name="product_name">Product Name</string>
     <string name="main_sreen_text">What are you looking for?</string>
     <string name="main_button_text">GO</string>
+    <string name="clothing">Clothing</string>
+    <string name="Electronics">Electronics</string>
+    <string name="Home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="popularProducts">Popular Products</string>
+    <string name="capture_button">Capture</string>
 </resources>

@@ -12,6 +12,7 @@ import java.util.Locale;
 public class ProductList extends AppCompatActivity {
 
     private static final String SEARCH_MESSAGE = "Search";
+    private static final String SEARCH_SHOW = "Show";
     private ProductAdapter mAdapter;
 
     @Override
@@ -21,9 +22,11 @@ public class ProductList extends AppCompatActivity {
 
 
         String searchHint = getIntent().getStringExtra(SEARCH_MESSAGE);
+        boolean showSearch = getIntent().getBooleanExtra(SEARCH_SHOW, true);
 
         SearchView searchText = (SearchView) findViewById(R.id.searchView);
         searchText.setQuery(searchHint, false);
+//        searchText.setVisibility();
 
 
 
