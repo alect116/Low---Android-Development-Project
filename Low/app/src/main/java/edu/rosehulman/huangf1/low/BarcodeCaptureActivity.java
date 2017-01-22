@@ -11,7 +11,3 @@ public class BarcodeCaptureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_barcode_capture);
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/huangf1/master

@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
                 Intent barcodeIntent = new Intent(MainActivity.this, BarcodeCaptureActivity.class);
                 startActivity(barcodeIntent);
-<<<<<<< HEAD
             }
         });
 
@@ -53,8 +52,6 @@ public class MainActivity extends AppCompatActivity
                 String message = editText.getQuery().toString();
                 intent.putExtra(SEARCH_MESSAGE, message);
                 startActivity(intent);
-=======
->>>>>>> refs/remotes/huangf1/master
             }
         });
 

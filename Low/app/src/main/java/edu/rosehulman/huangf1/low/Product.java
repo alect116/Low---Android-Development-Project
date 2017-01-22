@@ -1,6 +1,7 @@
 package edu.rosehulman.huangf1.low;
 
-<<<<<<< HEAD
+import org.json.JSONObject;
+
 import android.icu.text.IDNA;
 import android.media.Image;
 import android.media.RemoteController;
@@ -26,22 +27,10 @@ public class Product {
     private Image image;
 //    private JSONObject metadata;
     private JSONObject products;
-=======
-/**
- * Created by huangf1 on 1/15/2017.
- */
-
-public class Product {
-    private String mName;
-    private String mRetailer;
-    private String mLink;
-    private Double mPrice;
->>>>>>> refs/remotes/huangf1/master
 
     public Product() {
     }
 
-<<<<<<< HEAD
     public JSONObject getProducts() {
         return products;
     }
@@ -112,37 +101,6 @@ public class Product {
 
     public int getId() {
         return id;
-=======
-    public String getmName() {
-        return mName;
-    }
-
-    public void setmName(String mName) {
-        this.mName = mName;
-    }
-
-    public String getmRetailer() {
-        return mRetailer;
-    }
-
-    public void setmRetailer(String mRetailer) {
-        this.mRetailer = mRetailer;
-    }
-
-    public String getmLink() {
-        return mLink;
-    }
-
-    public void setmLink(String mLink) {
-        this.mLink = mLink;
-    }
-
-    public Double getmPrice() {
-        return mPrice;
-    }
-
-    public void setmPrice(Double mPrice) {
-        this.mPrice = mPrice;
->>>>>>> refs/remotes/huangf1/master
     }
 }
+
