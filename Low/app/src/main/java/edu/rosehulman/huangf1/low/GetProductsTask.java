@@ -34,9 +34,10 @@ public class GetProductsTask extends AsyncTask<String, Void, ArrayList<Product>>
             e.printStackTrace();
         }
         ArrayNode products = (ArrayNode) node.get("products");
+
         ArrayList<Product> prods = new ArrayList<>();
         for (int i=0; i<products.size(); i++){
-            Product p = new Product(products.get(1).get("name").asText());
+            Product p = new Product(products.get(i).get("name").asText(), products.get(i).get("priceLabel").asText());
             mUserActivity.addProduct(p);
             prods.add(p);
         }

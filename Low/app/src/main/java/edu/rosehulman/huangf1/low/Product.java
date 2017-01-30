@@ -22,7 +22,7 @@ public class Product {
     private int id;
     private String retailer;
     private String clickUrl;
-    private Double price;
+    private String price;
     private String priceLabel;
     private Image image;
 //    private JSONObject metadata;
@@ -31,8 +31,9 @@ public class Product {
     public Product() {
     }
 
-    public Product(String n){
+    public Product(String n, String p){
         name = n;
+        priceLabel = p;
     }
 
     public JSONObject getProducts() {
@@ -95,11 +96,11 @@ public class Product {
         this.retailer = retailer;
     }
 
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
