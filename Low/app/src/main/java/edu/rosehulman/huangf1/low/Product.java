@@ -31,6 +31,10 @@ public class Product {
     public Product() {
     }
 
+    public Product(String n){
+        name = n;
+    }
+
     public JSONObject getProducts() {
         return products;
     }

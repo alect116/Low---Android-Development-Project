@@ -1,5 +1,6 @@
 package edu.rosehulman.huangf1.low;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -29,6 +30,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     private RecyclerView mRecyclerView;
     private String[] mSearchQuery;
     private String mUrl;
+    private ViewHolder mView;
 
     public ProductAdapter(Context context, RecyclerView view, String searchQuery) {
         mContext = context;
@@ -38,9 +40,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
         //load products
         for (int i=0; i<mSearchQuery.length; i++) {
-            mUrl = String.format(Locale.US, "http://api.shopstyle.com/api/v2/products?pid=uid8681-34276459-70&cat=mens-clothes&fts=" + mSearchQuery[i]);
+            mUrl = String.format(Locale.US, "https://api.shopstyle.com/api/v2/products?pid=uid8681-34276459-70&cat=mens-clothes&fts=" + mSearchQuery[i]);
         }
-        mUrl = mUrl + "sort=PriceLoHi&offset=0&limit=10";
+        mUrl = mUrl + "&sort=PriceLoHi&offset=0&limit=10";
         (new GetProductsTask(this)).execute(mUrl);
 
 
@@ -48,22 +50,24 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     @Override
     public ProductAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Log.d("Set Text", "set");
         View view = LayoutInflater.from(mContext).inflate(R.layout.grid_view, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ProductAdapter.ViewHolder holder, int position) {
-
+        holder.productNameText.setText(mProducts.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-//        return mProducts.size();
-        return 0;
+        return mProducts.size();
+//        return 0;
     }
 
     public void addProduct(Product product) {
+        Log.d("Product Added", "added");
         mProducts.add(product);
     }
 
@@ -80,8 +84,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             productNameText = (TextView) itemView.findViewById(R.id.productNameText);
             itemView.setOnTouchListener(this);
 
-
         }
+
 
         @Override
         public boolean onTouch(View v, MotionEvent event) {

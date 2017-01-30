@@ -20,11 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".ProductList" />
-=======
->>>>>>> refs/remotes/huangf1/master
-        <activity android:name=".BarcodeCaptureActivity"></activity>
+        <activity android:name=".BarcodeCaptureActivity"/>
     </application>
 
 </manifest>
